@@ -1,7 +1,6 @@
 package koschei.config;
 
 import koschei.models.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -42,12 +41,12 @@ public class AppConfig {
     }
 
     @Bean
-    public static Needle7 getNeedle(@Qualifier("getDeth8") Deth8 deth) {
+    public static Needle7 getNeedle(@Qualifier("getDeth") Deth8 deth) {
         return new Needle7(deth);
     }
 
     @Bean
-    public static Deth8 getDeth8() {
+    public static Deth8 getDeth() {
         return new Deth8();
     }
 
